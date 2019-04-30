@@ -1,0 +1,15 @@
+apply plugin: 'application'
+
+/*
+dependencies {
+    compile project (':common')
+}
+*/
+
+mainClassName = 'com.CIMthetics.JavaSECSTools.SECSSpy.SECSSpy'
+/*
+applicationDefaultJvmArgs = ["-Dvulkan.validation=${rootProject.ext.VULKAN_VALIDATION}",
+                             "-Djvulkan.native.library.path=${rootProject.ext.VULKAN_NATIVE_LIBRARY_PATH}",
+                             "-Djvulkan-examples.shader.path=${rootProject.ext.PROJECT_SHADER_PATH}",
+                             "-Dlog4j.configurationFile=${rootProject.ext.LOG4J2_CONFIG_FILE}"]
+*/
