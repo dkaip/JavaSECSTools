@@ -119,21 +119,18 @@ public class ListSECSItem extends SECSItem
      * This method returns a SECSItem contained in this list based on its 
      * "address" or null if the item does not exist.  
      * 
-     * In the example below a specified address of "3.2" would return the
+     * In the example below a specified address of &quot;3.2&quot; would return the
      * element with the value 'Answer' and type of ASCII.
      * <br>
-     * <ol>
-     * <li>A 'ABC' </li>
-     * <li>A 'DEF' </li>
-     * <li>L 3 </li>
-     * <ol>
-     * <li>I2 -32768</li>
-     * <li>A 'Answer'</li>
-     * <li>U1 255</li>
-     * </ol>
-     * <li>F4 3.141592</li>
-     * </ol>
-     * 
+     * <pre>
+     * 1. A 'ABC'
+     * 2. A 'DEF'
+     * 3. L 3
+     *     1. I2 -32768
+     *     2. A 'Answer'
+     *     3. U1 255
+     * 4. F4 3.141592
+     * </pre>
      * @param address - The &quot;address&quot; of the element to be retrieved.
      * Refer to the description for more details.
      * @return The SECSItem at the provided address or null if not found.
