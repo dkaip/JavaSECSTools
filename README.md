@@ -16,9 +16,9 @@ This will create a <code>JavaSECSTools</code> directory in your current director
 
 ## Building
 Change your current directory (<code>cd</code>) to the project root directory.  If you used the 
-command above it would be <code>cd jvulkan</code>.  
+command above it would be <code>cd JavaSECSTools</code>.  
 
-Enter the following<code>gradle</code> command:
+Enter the following <code>gradle</code> command:
 
 <code>gradle assemble test</code>
 
