@@ -20,34 +20,17 @@ command above it would be <code>cd JavaSECSTools</code>.
 
 Enter the following <code>gradle</code> command:
 
-<code>gradle assemble test</code>
+<code>gradle assemble test javadoc</code>
 
 This compiles and creates a jar file with the appropriate files and runs the unit tests.
 
-The result of a successful build is file <code>jvulkan.jar</code> found in the <code>build/libs</code> directory.
-
-## Installation
-
-In addition to this library you will need to retrieve and build the 
-[jvulkan-natives-Linux-x86_64](https://github.com/dkaip/jvulkan-natives-Linux-x86_64) project.  The **jvulkan-natives-Linux-x86_64** 
-library provides the linkage between code written in Java using this library and 
-the Vulkan® SDK provided by LUNARG. 
+The result of a successful build produces several files:
+* The file <code>SECSItems.jar</code> found in the <code>SECSItems/build/libs</code> directory.
+* The file uhhh that contains the javadoc for the classes contained in the file <code>SECSItems.jar</code>.
+* The file <code>SECSSpy.jar</code> found in the <code>SECSSpy/build/libs</code> directory.
 
 ##Documentation
 
-At the current time, refer to the documentation provided by the 
-[KRONOS® GROUP](https://www.khronos.org/). It may be found here 
-[Vulkan® Documentation](https://www.khronos.org/registry/vulkan/specs/1.1-extensions/html/). 
-
-This documentation is written with c++ in mind, but, currently the specification is 
-updated rather frequently and because of this it is probably the best source for 
-accuracy. **jvulkan** is implemented in a systematic way so that the 
-&quot;conversion&quot; between the c++ and Java form of the functions(methods) 
-should happen in a consistent manner.  Refer to the **Usage Notes** section below 
-for more information.
-
-In the future, I may work on adding javadoc so that working in an IDE might be easier, 
-but, that is way down the road.
 
 ## Usage Notes
 The [Vulkan® SDK](https://www.lunarg.com/vulkan-sdk/) from LUNARG is written in c++ 
