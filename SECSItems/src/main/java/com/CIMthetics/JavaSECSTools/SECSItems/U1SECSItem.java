@@ -53,7 +53,7 @@ public class U1SECSItem extends SECSItem
      * This constructor creates a <code>SECSItem</code> that has a type of <code>U1</code> with
      * a specified number of length bytes.
      * <p>
-     * This form of the constructor is not needed much nowadays.  In past
+     * This form of the constructor is not needed much nowadays.  In the past
      * there were situations where the equipment required that messages
      * contained SECSItems that had a specified number of length bytes.
      * This form of the constructor is here to handle these problem child cases.

@@ -383,11 +383,13 @@ public abstract class SECSItem
     /*
      * This will need to be implemented by the Classes that extend this one.
      */
+    @Override
     public abstract boolean equals(Object abc);
 
     /*
      * This will need to be implemented by the Classes that extend this one.
      */
+    @Override
     public abstract int hashCode();
     
     /**

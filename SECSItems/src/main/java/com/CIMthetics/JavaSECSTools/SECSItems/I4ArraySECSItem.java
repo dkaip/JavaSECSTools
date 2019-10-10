@@ -50,7 +50,7 @@ public class I4ArraySECSItem extends SECSItem
      * the minimum number of length bytes required.
      * <br>
      * Note: It will be created with the number of length bytes required
-     * based on the length (in elements) of the <code>byte[]</code> provided.
+     * based on the length (in elements) of the <code>int[]</code> provided.
      * The maximum array length allowed is <code>16777215</code> bytes(elements).
      * 
      * @param value an array of signed 32-bit integers to be assigned to this SECSItem
@@ -65,7 +65,7 @@ public class I4ArraySECSItem extends SECSItem
      * This constructor creates a SECSItem that has a type of <code>I4</code>
      * with the specified value.
      * <p>
-     * This form of the constructor is not needed much nowadays.  In past
+     * This form of the constructor is not needed much nowadays.  In the past
      * there were situations where the equipment required that messages
      * contained SECSItems that had a specified number of length bytes.
      * This form of the constructor is here to handle these problem child cases.

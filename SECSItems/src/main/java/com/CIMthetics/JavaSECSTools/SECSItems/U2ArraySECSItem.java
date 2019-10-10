@@ -72,7 +72,7 @@ public class U2ArraySECSItem extends SECSItem
      * This constructor creates a SECSItem that has a type of <code>U2</code>
      * with the specified value.
      * <p>
-     * This form of the constructor is not needed much nowadays.  In past
+     * This form of the constructor is not needed much nowadays.  In the past
      * there were situations where the equipment required that messages
      * contained SECSItems that had a specified number of length bytes.
      * This form of the constructor is here to handle these problem child cases.

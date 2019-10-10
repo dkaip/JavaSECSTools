@@ -52,7 +52,7 @@ public class ListSECSItem extends SECSItem
      * This constructor creates a <code>SECSItem</code> that has a type of <code>L</code>
      * with the specified value and specified number of length bytes.
      * <p>
-     * This form of the constructor is not needed much nowadays.  In past
+     * This form of the constructor is not needed much nowadays.  In the past
      * there were situations where the equipment required that messages
      * contained SECSItems that had a specified number of length bytes.
      * This form of the constructor is here to handle these problem child cases.
