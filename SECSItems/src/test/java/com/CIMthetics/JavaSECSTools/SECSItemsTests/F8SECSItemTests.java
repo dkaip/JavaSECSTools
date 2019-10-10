@@ -51,6 +51,15 @@ public class F8SECSItemTests
     }
 
     @Test
+    public void test02a()
+    {
+        byte[] input = { (byte)((SECSItemFormatCode.getNumberFromSECSItemFormatCode(SECSItemFormatCode.F8 ) << 2) | 0x01), 0x08, -1, (byte)0XEF, -1, -1, -1, -1, -1, -1 };
+        double expectedOutput = -Double.MAX_VALUE;
+        F8SECSItem secsItem = new F8SECSItem(input, 0);
+        assertTrue(secsItem.getValue() == expectedOutput);
+    }
+
+    @Test
     public void test03()
     {
         byte[] input = { (byte)((SECSItemFormatCode.getNumberFromSECSItemFormatCode(SECSItemFormatCode.F8 ) << 2) | 0x01), 0x08, -1, -16, 0, 0, 0, 0, 0, 0 };

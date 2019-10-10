@@ -71,6 +71,25 @@ public class F4ArraySECSItemTests
     }
 
     @Test
+    public void test02a()
+    {
+        byte[] input = { (byte)((SECSItemFormatCode.getNumberFromSECSItemFormatCode(SECSItemFormatCode.F4 ) << 2) | 0x01), 24, 
+                127, 127, -1, -1,
+                -1, 127, -1, -1,
+                0, 0, 0, 1,
+                -1, -128, 0, 0,
+                127, -128, 0, 0,
+                0, 0, 0, 0 };
+        F4ArraySECSItem secsItem = new F4ArraySECSItem(input, 0);
+        assertTrue(secsItem.getValue()[0] == Float.MAX_VALUE);
+        assertTrue(secsItem.getValue()[1] == -Float.MAX_VALUE);
+        assertTrue(secsItem.getValue()[2] == Float.MIN_VALUE);
+        assertTrue(secsItem.getValue()[3] == Float.NEGATIVE_INFINITY);
+        assertTrue(secsItem.getValue()[4] == Float.POSITIVE_INFINITY);
+        assertTrue(secsItem.getValue()[5] == 0.0F);
+    }
+
+    @Test
     public void test03()
     {
         byte[] input = { (byte)((SECSItemFormatCode.getNumberFromSECSItemFormatCode(SECSItemFormatCode.F4 ) << 2) | 0x01), 20, 

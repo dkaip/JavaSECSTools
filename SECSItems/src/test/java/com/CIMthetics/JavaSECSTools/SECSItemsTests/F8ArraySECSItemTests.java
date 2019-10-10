@@ -82,6 +82,22 @@ public class F8ArraySECSItemTests
     }
 
     @Test
+    public void test03a()
+    {
+        double[] input = {Double.MAX_VALUE, -Double.MAX_VALUE, Double.MIN_VALUE, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, 0.0D};
+        byte[] expectedResult = { (byte)((SECSItemFormatCode.getNumberFromSECSItemFormatCode(SECSItemFormatCode.F8 ) << 2) | 0x01), 48, 
+                127, -17, -1, -1, -1, -1, -1, -1,
+                -1, (byte)0XEF, -1, -1, -1, -1, -1, -1,
+                0, 0, 0, 0, 0, 0, 0, 1,
+                -1, -16, 0, 0, 0, 0, 0, 0,
+                127, -16, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0 };
+        
+        F8ArraySECSItem secsItem = new F8ArraySECSItem(input);
+        assertArrayEquals(secsItem.toRawSECSItem(), expectedResult);
+    }
+
+    @Test
     public void test04()
     {
         double[] input = {Double.MAX_VALUE, Double.MIN_VALUE, Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY, 0.0D};

@@ -51,6 +51,15 @@ public class F4SECSItemTests
     }
 
     @Test
+    public void test02a()
+    {
+        byte[] input = { (byte)((SECSItemFormatCode.getNumberFromSECSItemFormatCode(SECSItemFormatCode.F4 ) << 2) | 0x01), 0x04, -1, 127, -1, -1 };
+        float expectedOutput = -Float.MAX_VALUE;
+        F4SECSItem secsItem = new F4SECSItem(input, 0);
+        assertTrue(secsItem.getValue() == expectedOutput);
+    }
+
+    @Test
     public void test03()
     {
         byte[] input = { (byte)((SECSItemFormatCode.getNumberFromSECSItemFormatCode(SECSItemFormatCode.F4 ) << 2) | 0x01), 0x04, -1, -128, 0, 0 };
