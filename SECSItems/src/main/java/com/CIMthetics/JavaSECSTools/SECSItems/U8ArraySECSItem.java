@@ -118,6 +118,7 @@ public class U8ArraySECSItem extends SECSItem
      * Creates and returns a <code>byte[]</code> that represents this <code>SECSItem</code> in &quot;wire/transmission format&quot;.
      * @return - A <code>byte[]</code> representation of this <code>SECSItem</code> content that is suitable for transmission.
      */
+    @Override
     public byte[] toRawSECSItem()
     {
         byte[] output = new byte[outputHeaderLength()+(value.length * 8)];
@@ -151,6 +152,7 @@ public class U8ArraySECSItem extends SECSItem
         return output;
     }
     
+    @Override
     public String toString()
     {
         return "Format:" + formatCode.toString() + " Value: Array";

@@ -92,7 +92,7 @@ public class BinarySECSItem extends SECSItem
         value = new short[lengthInBytes];
         for(int i = 0, j = offset; i < value.length; i++, j++)
         {
-            value[i] = (short)(0x00FF & (short)data[j]);
+            value[i] = (short)(0x00FF & data[j]);
         }
     }
     
@@ -115,6 +115,7 @@ public class BinarySECSItem extends SECSItem
      * Creates and returns a <code>byte[]</code> that represents this SECSItem in &quot;wire/transmission format&quot;.
      * @return - A <code>byte[]</code> representation of this SECSItem's content that is suitable for transmission.
      */
+    @Override
     public byte[] toRawSECSItem()
     {
         byte[] output = new byte[outputHeaderLength()+value.length];
@@ -135,12 +136,13 @@ public class BinarySECSItem extends SECSItem
      * @return a String representation of this item in a format
      * suitable for debugging.
      */
+    @Override
     public String toString()
     {
         if (value.length == 1)
             return "Format:" + formatCode.toString() + " Value: " + value[0];
-        else
-            return "Format:" + formatCode.toString() + " Value: Array";
+        
+        return "Format:" + formatCode.toString() + " Value: Array";
     }
     
     @Override

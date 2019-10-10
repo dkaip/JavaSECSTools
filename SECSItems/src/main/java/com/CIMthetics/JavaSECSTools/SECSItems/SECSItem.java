@@ -79,17 +79,15 @@ public abstract class SECSItem
      */
     protected SECSItem(SECSItemFormatCode formatCode, int lengthInBytes)
     {
-        if (lengthInBytes < 0 || lengthInBytes > (int)0x00FFFFFF)
+        if (lengthInBytes < 0 || lengthInBytes > 0x00FFFFFF)
         {
             throw new IllegalArgumentException(
                     "The value for the length argument must be between 0 and 16777215 inclusive.");
         }
-        else
-        {
-            this.formatCode = formatCode;
-            this.lengthInBytes = lengthInBytes;
-            outboundNumberOfLengthBytes = calculateMinimumNumberOfLengthBytes(lengthInBytes);
-        }
+
+        this.formatCode = formatCode;
+        this.lengthInBytes = lengthInBytes;
+        outboundNumberOfLengthBytes = calculateMinimumNumberOfLengthBytes(lengthInBytes);
     }
     
     /**
@@ -226,7 +224,7 @@ public abstract class SECSItem
      * @param length - the number of bytes this SECSItem will need in
      * &quot;wire/transmission format&quot;.
      */
-    private SECSItemNumLengthBytes calculateMinimumNumberOfLengthBytes(int length)
+    private static SECSItemNumLengthBytes calculateMinimumNumberOfLengthBytes(int length)
     {
         SECSItemNumLengthBytes result = SECSItemNumLengthBytes.ONE;
         if (length > 255)
@@ -345,7 +343,7 @@ public abstract class SECSItem
      */
     public void setOutboundNumberOfLengthBytes(int length, SECSItemNumLengthBytes desiredNumberOfLengthBytes)
     {
-        if (length < 0 || length > (int)0x00FFFFFF)
+        if (length < 0 || length > 0x00FFFFFF)
         {
             throw new IllegalArgumentException(
                     "The value for the length argument must be between 0 and 16777215 inclusive.");

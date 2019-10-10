@@ -99,6 +99,7 @@ public class F4SECSItem extends SECSItem
      * Creates and returns a <code>byte[]</code> that represents this <code>SECSItem</code> in &quot;wire/transmission format&quot;.
      * @return - A <code>byte[]</code> representation of this <code>SECSItem</code>'s content that is suitable for transmission.
      */
+    @Override
     public byte[] toRawSECSItem()
     {
         byte[] output = new byte[outputHeaderLength() + 4];
@@ -111,6 +112,7 @@ public class F4SECSItem extends SECSItem
         return output;
     }
     
+    @Override
     public String toString()
     {
         return "Format:" + formatCode.toString() + " Value: " + value;

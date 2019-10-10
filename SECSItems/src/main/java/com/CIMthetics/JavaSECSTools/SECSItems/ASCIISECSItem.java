@@ -104,6 +104,7 @@ public class ASCIISECSItem extends SECSItem
      * Creates and returns a <code>byte[]</code> that represents this SECSItem in &quot;wire/transmission format&quot;.
      * @return - A <code>byte[]</code> representation of this SECSItem's content that is suitable for transmission.
      */
+    @Override
     public byte[] toRawSECSItem()
     {
         byte[] output = new byte[outputHeaderLength()+value.length()];
@@ -122,6 +123,7 @@ public class ASCIISECSItem extends SECSItem
      * @return a String representation of this item in a format
      * suitable for debugging.
      */
+    @Override
     public String toString()
     {
         return "Format:" + formatCode.toString() + " Value: " + value.toString();

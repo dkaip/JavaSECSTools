@@ -107,7 +107,7 @@ public class U1ArraySECSItem extends SECSItem
         value = new short[lengthInBytes];
         for(int i = offset, j = 0; j < lengthInBytes; i++, j++)
         {
-            value[j] = (short)(0x00FF & (short)data[i]);
+            value[j] = (short)(0x00FF & data[i]);
         }
     }    
     
@@ -132,6 +132,7 @@ public class U1ArraySECSItem extends SECSItem
      * Creates and returns a <code>byte[]</code> that represents this <code>SECSItem</code> in &quot;wire/transmission format&quot;.
      * @return - A <code>byte[]</code> representation of this <code>SECSItem</code> content that is suitable for transmission.
      */
+    @Override
     public byte[] toRawSECSItem()
     {
         byte[] output = new byte[outputHeaderLength()+value.length];
@@ -152,6 +153,7 @@ public class U1ArraySECSItem extends SECSItem
         return output;
     }
     
+    @Override
     public String toString()
     {
         return "Format:" + formatCode.toString() + " Value: Array";

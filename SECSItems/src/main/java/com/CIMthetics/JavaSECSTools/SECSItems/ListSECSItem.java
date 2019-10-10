@@ -156,10 +156,8 @@ public class ListSECSItem extends SECSItem
                  */
                 return null;
             }
-            else
-            {
-                return getElementAt(addressArray[1]);
-            }
+            
+            return getElementAt(addressArray[1]);
         }
         
         return result;
@@ -169,6 +167,7 @@ public class ListSECSItem extends SECSItem
      * Creates and returns a <code>byte[]</code> that represents this <code>SECSItem</code> in &quot;wire/transmission format&quot;.
      * @return - A <code>byte[]</code> representation of this <code>SECSItem</code>'s content that is suitable for transmission.
      */
+    @Override
     public byte[] toRawSECSItem()
     {
         
@@ -195,6 +194,7 @@ public class ListSECSItem extends SECSItem
         return output;
     }
     
+    @Override
     public String toString()
     {
         StringBuilder result = new StringBuilder();

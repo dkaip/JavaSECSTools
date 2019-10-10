@@ -93,6 +93,7 @@ public class U1SECSItem extends SECSItem
         return value;
     }
 
+    @Override
     public byte[] toRawSECSItem()
     {
         byte[] output = new byte[outputHeaderLength()+1];
@@ -107,6 +108,7 @@ public class U1SECSItem extends SECSItem
         return output;
     }
     
+    @Override
     public String toString()
     {
         return "Format:" + formatCode.toString() + " Value: " + value;
