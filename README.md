@@ -1,6 +1,6 @@
 # JavaSECSTools
 
-**JavaSECSTools** is a project for those that are working primarily in th realm of shop floor automation in the semiconductor industry. 
+**JavaSECSTools** is a project for those that are working primarily in the realm of shop floor automation in the semiconductor industry. 
 If you do not work in that industry or you are not familiar with the [SEMI Standards](www.semi.org/en/standards) 
 **E4**, **E5**, **E30**, **E37**, el al, this project is probably not for you.  
 
